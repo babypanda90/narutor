@@ -50,12 +50,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 ?>
 
 
-
 <!DOCTYPE html>
 <html>
 <head>
 <title>组织分包</title>
 <style>
+#scoreTable {
+    margin-top: 15px;
+}
 th, td {
     background: linear-gradient(to bottom right, #d2b28a, #8f7657); /* http://www.color-hex.com/ */
     border: 1px solid black;
@@ -71,7 +73,7 @@ td > input {
     width:5em;
 }
 td > input[type='date'] {
-    width:9em;
+    width:10em;
 }
 .username-case {
     width:12em;
@@ -216,13 +218,14 @@ require "headbar.php";
 
 
 <div align=center>
+    <form style="display: inline;" method="post" align="right" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <input type="date" name="bonusdate_check" value=<?php echo $bonusdate?>>
+        <input type="submit" name="submit" value="查看">
+    </form>
 
     <table id="scoreTable">
         <caption>
-            <form style="display: inline;" method="post" align="right" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-                <input type="date" name="bonusdate_check" value=<?php echo $bonusdate?>><b class="tab-cap">组织分包情况</b>
-                <input type="submit" name="submit" value="查看">
-            </form>
+            <b class="tab-cap">组织分包情况</b>
         </caption>
         <tr>
             <th colspan="11">

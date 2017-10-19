@@ -1,8 +1,5 @@
 
-<?php
-?>
-
-<div align="center" style="border-style:none; height:200px; background:linear-gradient(to bottom, #0c644b, #ffffff);">
+<div align="center" style="border-style:none; height:200px; margin-top:15px; background:linear-gradient(to bottom, #0c644b, #ffffff);">
     <br>
     <?php
     if (!in_array(basename($_SERVER["PHP_SELF"]), array("adminlogin.php", "adminpanel.php", "register.php", "login.php", "install.php"))) {

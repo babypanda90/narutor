@@ -55,7 +55,7 @@ td > input {
     width:5em;
 }
 td > input[type='date'] {
-    width:9em;
+    width:10em;
 }
 .username-case {
     width:12em;

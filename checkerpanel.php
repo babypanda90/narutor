@@ -6,7 +6,6 @@ require "phpmods/accessauth.php";
 $validName = "/^.{1,}$/"; //"/^[\x{4e00}-\x{9fa5}a-zA-Z0-9]{1,12}$/u"; // 游戏名必须为1到12位汉字或字母数字
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
     if ($_POST['submit'] == "改名") {
         if (preg_match($validName,$_POST['username'])) {
             mysqli_query($mydb, "update users set username = '$_POST[username]' where userid = '$_POST[userid]'");

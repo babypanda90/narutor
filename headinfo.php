@@ -1,8 +1,5 @@
-<?php
-?>
-<link rel="stylesheet" href="css/main.css">
 
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!-- <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'zh-CN', 
@@ -11,16 +8,14 @@ function googleTranslateElementInit() {
   autoDisplay: false},
   'google_translate_element');
 }
-</script>
+</script> -->
 
-<!-- Buttons 库的核心文件 -->
-<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" type="text/css" href="css/buttons.css">
 
-<!-- 只有使用字体图标时才需要加载 Font-Awesome -->
-<link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/main.css">
 
-<div id="headinfo" align="right">
-    <div style="float:left;" id="google_translate_element"></div>
+<div id="headinfo" style="text-align:right; line-height:30px;">
+    <!-- <div style="float:left;" id="google_translate_element"></div> -->
     <?php
     echo "IP地址 = " . GetIP() . " | ";
     if(!in_array(basename($_SERVER["PHP_SELF"]), array("adminlogin.php", "adminpanel.php", "register.php", "login.php", "install.php"))) {
