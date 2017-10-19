@@ -1,0 +1,38 @@
+CREATE TABLE clubs (
+  clubid int NOT NULL auto_increment,
+  clubserver varchar(25) NOT NULL,
+  clubname varchar(25) NOT NULL,
+  clubqq varchar(25) NOT NULL,
+  clubchecker varchar(25) NOT NULL,
+  bonusvalue varchar(25) NOT NULL,
+  bonusdate date NOT NULL,
+  PRIMARY KEY (clubid),
+  UNIQUE (clubserver,clubname)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE users (
+  userid int NOT NULL auto_increment,
+  username varchar(25) NOT NULL,
+  usercode varchar(25) NOT NULL,
+  clubid int NOT NULL,
+  PRIMARY KEY (userid),
+  UNIQUE (username,clubid)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE scores (
+  scoreid int NOT NULL auto_increment,
+  clubid int NOT NULL,
+  userid int NOT NULL,
+  username varchar(25) NOT NULL,
+  bonusdate date NOT NULL,
+  restscore int NOT NULL,
+  weekdonation int NOT NULL,
+  warnumber int NOT NULL,
+  totalscore int NOT NULL,
+  bonus varchar(25) NOT NULL,
+  reducescore int NOT NULL,
+  endscore int NOT NULL,
+  description varchar(25) NOT NULL,
+  PRIMARY KEY (scoreid)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
